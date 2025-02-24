@@ -44,3 +44,14 @@ This project provides a Go-based tool to parse gNMI (gRPC Network Management Int
    ```bash
    git clone https://github.com/gwoodwa1/yang-to-ntriples.git
    cd yang-to-ntriples
+2. Compile the binary
+
+   ` go build -o triples ./cmd/triples`
+
+## Example Output
+For the sample JSON in main.go, you might see:
+```
+<http://example.net/interfaces/Ethernet8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://openconfig.net/rdf/Interface> .
+<http://example.net/interfaces/Ethernet8> <http://openconfig.net/rdf/inOctets> "25833637"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.net/interfaces/Ethernet8> <http://openconfig.net/rdf/inBroadcastPkts> "2367884"^^<http://www.w3.org/2001/XMLSchema#integer> .
+```
